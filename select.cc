@@ -26,7 +26,6 @@ RAI partition(RAI first, RAI pivot, RAI last) {
 template <typename RAI>
 RAI random_partition(RAI first, RAI last) {
     if (first == last) return first;
-    srand(time(NULL));
     RAI pivot = first + rand() % (last - first);
     return partition(first, pivot, last);
 }
